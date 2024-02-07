@@ -1,23 +1,23 @@
-## Portfolio
+## My Portfolio
 
 ---
 
-### Category Name 1 
+### Data Science Projects
 
-[Project 1 Title](/sample_page)
+[Project 1 Title](/project1)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
+[Project 2 Title](/project2)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
+[Project 3 Title](/project3)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 
-### Category Name 2
+### Career Insights
 
 - [Project 1 Title](http://example.com/)
 - [Project 2 Title](http://example.com/)
