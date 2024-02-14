@@ -103,7 +103,7 @@ header#mainhead {
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem;
-    padding-left: 4rem;
+    padding-left: 6vw;
     /* height: 100vh;
     width:35ch; */
 
@@ -111,7 +111,7 @@ header#mainhead {
     background: pink;
     background-image: url(/assets/images/fauzan.jpg);
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: 20% top;
     background-size: cover;
 }
 header#mainhead a {
