@@ -135,7 +135,7 @@ header {
 
 
 #branding {
-    transform: translateX(-1rem) translateY(2rem);
+    transform: translateY(2rem);
 }
 #branding svg {
     fill: var(--text-color);
