@@ -1,13 +1,31 @@
-title: Fauzan Arif # your name (or website title) here
-logo: "https://avatars.githubusercontent.com/u/77801644?v=4" # your photo (or logo) here
-description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
-  <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/fauzan-arif/">View My LinkedIn Profile</a> 
+# Site Configuration
+lang: en
+timezone: Europe/Berlin
+
+title: Fauzan Arif
+tagline: On a quest to explore Data Science.
+description: A seasoned Data Recruiter turned Data Professional with study background in quantitative areas of Finance and Economics. On a quest to explore Data Science.
+url: ""
+
+social_links:
+  LinkedIn: https://linkedin.com/in/fauzan-arif
+  Github:   https://github.com/fauzan-arif
+
+
+collections:
+  portfolio:
+    output: true
+    permalink: /works/:path/
+
+navigation:
+  - title: About
+    url: /about
   
-remote_theme: pages-themes/minimal@v0.2.0
+  - title: Portfolio
+    url: /portfolio
+
+  - title: Contact
+    url: /contact
+
 plugins:
-- jekyll-remote-theme
-google_analytics: UA-000000-0 # your Google Analytics tracking ID here
+  - jekyll-octicons
