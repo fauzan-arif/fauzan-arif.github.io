@@ -1,57 +1,50 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
-   {% if site.google_analytics %}
-   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', '{{ site.google_analytics }}');
-   </script>
-   {% endif %}
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   {% seo %}
-   <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-   <!--[if lt IE 9]>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-   <![endif]-->
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} – {{ site.title }}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--meta name="theme-color" content="#02fea8"-->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/fauzan.css">
 </head>
 <body>
-   <div class="wrapper">
-      <header>
-         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-         {% if site.logo %}
-         <img src="{{site.logo | relative_url}}" alt="Logo" />
-         {% endif %}
-         <p>{{ site.description | default: site.github.project_tagline }}</p>
-         {% if site.github.is_project_page %}
-         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-         {% endif %}
-         {% if site.github.is_user_page %}
-         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-         {% endif %}
-         {% if site.show_downloads %}
-         <ul class="downloads">
-            <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
-            <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
-         </ul>
-         {% endif %}
+   
+   <div class="container">
+
+      <header id="mainhead" class="page page-inset">
+         <div id="branding">
+            <a href="/">
+               <svg width="300" height="170" viewBox="0 0 300 170" xmlns="http://www.w3.org/2000/svg">
+                  <title>Fauzan Arif</title>
+                  <path id="fa-dot"    d="m163.9 150 9.899 9.899-9.9 9.9-9.899-9.9z"/>
+                  <path id="fa-arif"   d="m30.6 139 1.68-15.48 8.88-2.76L43.08 139h30L59.76 55H13.92L.6 139h30Zm2.28-20.52 3.36-31.56.24-7.32h.72l.24 7.32 3.12 29.16-7.68 2.4Zm74.4 20.52V97.96h.72v3.84c0 22.08 8.52 37.2 35.52 37.2v-31.2c-22.116-3.26-27.183-6.518-30.095-9.559l-.178-.187-.087-.094c24.48-.36 29.4-9.36 29.4-23.16 0-16.92-5.16-19.8-30.24-19.8H77.28v84h30Zm1.56-45.84h-1.56v-19.2c8.76.12 8.88 1.08 8.88 5.76 0 5.16-.12 13.44-7.32 13.44ZM179.52 139V55h-30v84h30Zm37.2 0v-34.2l17.52-4.92-.72-4.8-16.8 4.68V83.08l25.2 1.92V55h-55.2v84h30Z" fill-rule="nonzero"/>
+                  <!--path id="fa-fauzan" d="M101.703 43V18.844l2.257-.305v-2.44L93.529 17.38c-1.342.183-2.135-.427-2.135-1.159 0-.854.976-1.83 3.172-2.196l8.662-1.342V.3C85.05.483 83.22 5.851 83.22 9.816c0 4.514 2.379 7.076 6.466 8.052l-3.233.366v.061l-2.623.305v2.44l2.623-.305V43h15.25Zm15.023 1.098c6.954 0 9.882-5.368 9.882-10.736h.305V43h14.64V18.173c0-5.49-4.697-8.113-14.701-8.113h-16.47v14.03c5.307-1.708 10.858-3.172 13.969-3.172 1.586 0 2.562.366 2.562 1.22v.366c0 3.416-18.666 2.013-18.666 13.481 0 6.039 3.66 8.113 8.479 8.113Zm6.283-10.98c-.732 0-1.22-.671-1.22-1.647 0-1.87 1.904-3.263 3.793-4.628l.452-.327c.3-.218.596-.437.879-.657v3.599c-1.464 2.684-2.928 3.66-3.904 3.66Zm31.493 10.98c4.33 0 9.394-2.257 11.65-6.039L167.19 43h14.03V10.06l-15.25 1.22v22.509c0 1.586-.976 2.501-1.952 2.501-.854 0-1.708-.671-1.708-3.538V10.06l-15.25 1.22v26.535c0 4.392 3.416 6.283 7.442 6.283ZM217.166 43V28.055l-23.851 2.196 23.24-8.54V10.06h-28.547v14.03l22.143-1.83-23.424 8.601V43h30.439Zm13.376 1.098c6.954 0 9.882-5.368 9.882-10.736h.305V43h14.64V18.173c0-5.49-4.697-8.113-14.701-8.113h-16.47v14.03c5.307-1.708 10.858-3.172 13.969-3.172 1.586 0 2.562.366 2.562 1.22v.366c0 3.416-18.666 2.013-18.666 13.481 0 6.039 3.66 8.113 8.479 8.113Zm6.283-10.98c-.732 0-1.22-.671-1.22-1.647 0-1.72 1.612-3.037 3.34-4.3l.453-.328c.453-.327.906-.653 1.33-.984v3.599c-1.463 2.684-2.927 3.66-3.903 3.66Zm39.3 9.882V19.271c0-1.586.977-2.501 1.953-2.501.854 0 1.708.671 1.708 3.538V43h15.25V15.245c0-4.392-3.416-6.283-7.442-6.283-4.331 0-9.394 2.257-11.651 6.039l-1.037-4.941-14.03 1.83V43h15.25Z" fill-rule="nonzero"/-->
+                  <path id="fa-fauzan2" d="M92.58 43V25.615l8.906-2.501-.366-2.44-8.54 2.379v-8.479l12.81.976V.3H77.33V43h15.25Zm24.05 1.098c6.955 0 9.883-5.368 9.883-10.736h.305V43h14.64V18.173c0-5.49-4.697-8.113-14.701-8.113h-16.47v14.03c5.307-1.708 10.858-3.172 13.969-3.172 1.586 0 2.562.366 2.562 1.22v.366c0 3.416-18.666 2.013-18.666 13.481 0 6.039 3.66 8.113 8.479 8.113Zm6.284-10.98c-.732 0-1.22-.671-1.22-1.647 0-1.87 1.904-3.263 3.793-4.628l.452-.327c.3-.218.596-.437.879-.657v3.599c-1.464 2.684-2.928 3.66-3.904 3.66Zm31.493 10.98c4.33 0 9.394-2.257 11.65-6.039L167.096 43h14.03V10.06l-15.25 1.22v22.509c0 1.586-.976 2.501-1.952 2.501-.854 0-1.708-.671-1.708-3.538V10.06l-15.25 1.22v26.535c0 4.392 3.416 6.283 7.442 6.283ZM217.07 43V28.055l-23.851 2.196 23.24-8.54V10.06h-28.547v14.03l22.143-1.83-23.424 8.601V43h30.439Zm13.376 1.098c6.954 0 9.882-5.368 9.882-10.736h.305V43h14.64V18.173c0-5.49-4.697-8.113-14.701-8.113h-16.47v14.03c5.307-1.708 10.858-3.172 13.969-3.172 1.586 0 2.562.366 2.562 1.22v.366c0 3.416-18.666 2.013-18.666 13.481 0 6.039 3.66 8.113 8.479 8.113Zm6.283-10.98c-.732 0-1.22-.671-1.22-1.647 0-1.72 1.612-3.037 3.34-4.3l.453-.328c.453-.327.906-.653 1.33-.984v3.599c-1.463 2.684-2.927 3.66-3.903 3.66ZM276.03 43V19.271c0-1.586.977-2.501 1.953-2.501.854 0 1.708.671 1.708 3.538V43h15.25V15.245c0-4.392-3.416-6.283-7.442-6.283-4.331 0-9.394 2.257-11.651 6.039l-1.037-4.941-14.03 1.83V43h15.25Z" fill-rule="nonzero"/>
+               </svg>
+            </a>
+         </div>
+
+         <div class="intro-text">
+            {{ site.description }}
+         </div>
+         
+         <nav>
+            <h4 class="social-links-headline">My profile on:</h4>
+            <ul class="social-links-list">
+               {% for link in site.social_links %}
+               <li><a class="icon icon-{{link[0]}}" href="{{ link[1] }}">
+                  {{ link[0] }}</a></li>
+               {% endfor %}
+            </ul>
+         </nav>
       </header>
-      <section>
+
+      <!--section class="page page-inset">
          {{ content }}
-      </section>
-      <footer>
-         {% if site.github.is_project_page %}
-         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-         {% endif %}
-         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+      </section-->
+
    </div>
-   <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
 </body>
 </html>
