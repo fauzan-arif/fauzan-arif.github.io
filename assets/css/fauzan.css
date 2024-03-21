@@ -97,8 +97,6 @@ body {
 
 
 header#mainhead {
-    --background: url('/assets/images/fauzan.jpg');
-    /* background: pink; */
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -110,7 +108,8 @@ header#mainhead {
     width:35ch; */
 
     color: var(--text-color);
-    background: pink;
+    --background: url('/assets/images/fauzan.jpg');
+    background-color: #C3788C;
     background-image: var(--background);
     background-repeat: no-repeat;
     background-position: 20% top;
