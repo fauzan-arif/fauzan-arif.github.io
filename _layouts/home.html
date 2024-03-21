@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/assets/css/base.css">
     <link rel="stylesheet" href="/assets/css/fauzan.css">
 </head>
-<body>
+<body id="homepage">
    
    <div class="container">
 
@@ -26,13 +26,17 @@
             </a>
          </div>
 
-         <nav class="nav-vertical">
+         <nav>
             <ul>
             {% for link in site.navigation %}
               <li><a class="icon icon-{{link[0]}}" href="{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %}
            </ul>
          </nav>
+
+         <div class="intro-text">
+            {{ site.description }}
+         </div>
          
          <nav>
             <h4 class="social-links-headline">My profile on:</h4>
@@ -45,9 +49,9 @@
          </nav>
       </header>
 
-      <section class="page page-inset">
+      <!--section class="page page-inset">
          {{ content }}
-      </section>
+      </section-->
 
    </div>
 </body>
