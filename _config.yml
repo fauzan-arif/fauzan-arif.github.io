@@ -7,15 +7,11 @@ tagline: On a quest to explore Data Science.
 description: A seasoned Data Recruiter turned Data Professional with study background in quantitative areas of Finance and Economics. On a quest to explore Data Science.
 url: ""
 
+background_image: /assets/images/fauzan.jpg
+
 social_links:
   LinkedIn: https://linkedin.com/in/fauzan-arif
   Github:   https://github.com/fauzan-arif
-
-
-collections:
-  portfolio:
-    output: true
-    permalink: /works/:path/
 
 navigation:
   - title: About
@@ -26,6 +22,12 @@ navigation:
 
   - title: Contact
     url: /contact
+
+
+collections:
+  portfolio:
+    output: true
+    permalink: /works/:path/
 
 plugins:
   - jekyll-octicons
