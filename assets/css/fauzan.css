@@ -44,10 +44,10 @@ body {
 
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     scroll-snap-type: y mandatory;
     /* scroll-snap-points-y: repeat(100vh);*/
-    /* scroll-padding:5rem; */
+    /* scroll-padding:5rem; */;
 }
 .page {
     height: 100vh;
@@ -61,6 +61,7 @@ body {
     margin: 1rem;
     border-radius: 0.5rem;
     outline: 4px solid rgb(237, 211, 215);   
+    padding: 1rem 2rem;
 }
 
 
@@ -91,7 +92,7 @@ body {
     font-size: 1.25rem;
     font-weight: 200;
     line-height: 1.6;
-    width:25ch;
+    max-width:25ch;
 }
 
 
@@ -131,6 +132,17 @@ header#mainhead a:hover {
 
 header {
     /* text-shadow: 8px 16px rgba(98, 57, 64, 0.2); */
+}
+
+body:not(#homepage) header#mainhead {
+  width: 40ch;
+  padding: 1rem 2rem;
+}
+body:not(#homepage) header#mainhead .nav-vertical ul{
+  flex-direction: column;
+}
+body:not(#homepage) header#mainhead .nav-vertical {
+  margin-block: 2rem auto;
 }
 
 
